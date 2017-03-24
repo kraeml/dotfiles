@@ -2,6 +2,7 @@
 mkdir -p ${1}
 cd ${1}
 git init
+curl -H "Content-Type:application/json" https://gitlab.com/api/v3/projects?private_token=YOUR-TOKEN -d "{ \"name\": \"${1}\" }"
 git remote add origin git@${2:-"gitlab"}.com:kraeml/${1}.git
 touch README.md
 git add README.md
