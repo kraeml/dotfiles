@@ -1,12 +1,12 @@
 [user]
-	name = Gerard Braad
-	email = me@gbraad.nl
+	name = kraeml
+	email = kraeml@sesamestreet.franken.de
 [core]
     editor = vim
-    whitespace = off
+    # whitespace = off
     excludesfile = ~/.gitignore
 [advice]
-    statusuoption = false
+    # statusuoption = false
 [color]
     ui = true
 [push]

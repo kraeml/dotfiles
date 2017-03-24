@@ -24,14 +24,14 @@ mkdir -p ~/.local/bin
 mkdir -p ~/.local/lib/python2.7/site-packages/
 
 # Personal dotfiles
-git clone https://github.com/gbraad/dotfiles.git ~/.dotfiles
+git clone https://github.com/kraeml/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 git submodule init
 git submodule update
 
 # stow the configurations
-stow powerline
-stow zsh
-stow tmux
-stow vim
+#stow powerline
+#stow zsh
+#stow tmux
+#stow vim
 stow git
