@@ -1,5 +1,5 @@
 #!/bin/sh
-git clone git@${2:-"gitlab"}.com:gbraad/${1}.git
+git clone git@${2:-"gitlab"}.com:kraeml/${1}.git
 cd ${1}
 touch README.md
 git add README.md

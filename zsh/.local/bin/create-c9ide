@@ -22,5 +22,5 @@ docker run -d \
    -e "LETSENCRYPT_EMAIL=${USER}" \
    -e "USERNAME=${USER}" \
    -e "PASSWORD=${PASS}" \
-   gbraad/c9ide:${FLAVOR}
+   kraeml/c9ide:${FLAVOR}
 
