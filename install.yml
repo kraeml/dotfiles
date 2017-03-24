@@ -4,6 +4,7 @@
   #remote_user: root
   #become: yes
   #become_method: sudo
+  connection: local
 
   tasks:
   - name: Install list of required packages
@@ -13,10 +14,10 @@
     with_items:
     - git
     - tmux
-    - zsh
+    #- zsh
     - stow
-    - python-psutil
-    - mc
+    #- python-psutil
+    #- mc
 
   - name: Create directory structure
     file: path="{{ item }}" state=directory mode=750
@@ -26,13 +27,13 @@
     - "{{ ansible_env.HOME }}/.local/python2.7/site-packages"
   
   - name: Clone dotfiles
-    git: repo=https://github.com/gbraad/dotfiles.git dest={{ ansible_env.HOME }}/.dotfiles
+    git: repo=https://github.com/kraeml/dotfiles.git dest={{ ansible_env.HOME }}/.dotfiles
 
   - name: Stow configurations
     command: chdir={{ ansible_env.HOME }}/.dotfiles stow {{ item }}
     with_items:
-    - powerline
-    - zsh
-    - tmux
-    - vim
+    #- powerline
+    #- zsh
+    #- tmux
+    #- vim
     - git
